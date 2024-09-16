@@ -1,5 +1,3 @@
-import numpy as np
-
 students = {
     'Alice': {
          'Mathematiques': 90,
@@ -24,7 +22,8 @@ if name in students:
      print(f"Notes de {name}")
      for key , value in students[name].items():
           print(f"{key} : {value}")
-     mean = round(np.array(list(students[name].values())).mean(), 2)
+     all_grades = list(students[name].values())
+     mean = round(sum(all_grades)/len(all_grades), 2)
      print(f"Moyenne de {name} : {mean}")
 else:
      print(f"L'étudiant {name} n'existe pas dans la liste.")
