@@ -1,8 +1,10 @@
-import numpy as np
-
 # Fonction calculate_average
-def calculate_average(numbers):
-    return round(np.array(numbers).mean(), 2)
+def calculate_average(numbers: list):
+    mean = 0
+    for number in numbers:
+        mean += number
+    mean /= len(numbers)
+    return mean
  
 # Exemple d'utilisation de la fonction
 numbers = [10, 20, 30, 40, 50]

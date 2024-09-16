@@ -7,20 +7,20 @@ class BankAccount():
     def deposit(self, amount):
         if isinstance(amount, int):
             if amount < 0:
-                return print("Vous ne pouvez pas entrer un nombre négatif pour effectuer un dépôt.\n")
+                return print(f"Vous avez entré {amount}. Vous ne pouvez pas entrer un nombre négatif pour effectuer un dépôt.\n")
             else:
                 self.balance += amount
         else:
-            return print("Merci de n'entrer qu'un nombre commme montant du dépôt.\n")
+            return print(f"Vous avez entré {amount}. Merci de n'entrer qu'un nombre commme montant du dépôt.\n")
 
     def withdraw(self, amount):
         if isinstance(amount, int):
             if self.balance - amount < 0:
-                return print("Vous n'avez pas assez de fond pour effectuer ce retrait.\n")
+                return print(f"Vous avez entré {amount} et votre balance est {self.balance}. Vous n'avez pas assez de fond pour effectuer ce retrait.\n")
             else:
                 self.balance -= amount
         else:
-            return print("Merci de n'entrer qu'un nombre commme montant du dépôt.")
+            return print(f"Vous avez entré {amount}. Merci de n'entrer qu'un nombre commme montant du dépôt.")
 
     def display_balance(self):
         return print(f"Compte de {self.account_holder} \n  Solde de : {self.balance}\n")

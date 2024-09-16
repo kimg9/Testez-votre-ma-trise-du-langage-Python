@@ -3,8 +3,8 @@ def square(number):
     if isinstance(number, int) or isinstance(number, float):
         return number * number
     else:
-        print("Le paramètre doit être un nombre !")
+        print(f"Erreur ! {number} n'est pas un nombre !")
         return None
 
-print(square(25))
+print(f"The square root of {25} is: {square(25)}")
 print(square("abc"))

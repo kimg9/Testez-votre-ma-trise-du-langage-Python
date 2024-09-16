@@ -23,3 +23,8 @@ def subtraction(a, b):
     :type b: int
     """
     return a - b
+
+print(f"\nResult of sum of 4 + 5 is :{sum(4, 5)}")
+print(f"\nDocstring of sum function is: {sum.__doc__}")
+print(f"\nResult of substraction of 10 - 6 is: {subtraction(10, 6)}")
+print(f"\nDocstring of substraction function is: {subtraction.__doc__}")
