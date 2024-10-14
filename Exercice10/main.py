@@ -9,12 +9,12 @@ class Person():
 
   
 class Employee(Person):
-    def __init__(self, salary, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, name, age, salary):
+        super().__init__(name, age)
         self.salary = salary
 
     def display_details(self):
         super().display_details()
         return print(f"Salaire : {self.salary}")
 
-Employee(name="John",age=27,salary=35000).display_details()
+Employee("John",27,35000).display_details()

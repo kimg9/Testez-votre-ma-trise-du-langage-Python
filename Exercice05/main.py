@@ -13,13 +13,13 @@ def sum(a, b):
  
 def subtraction(a, b):
     """
-    return  the result of the substration of two numbers.
+    return the result of the substration of two numbers.
     
     Attributes
     -----------
-    :attr a: first number of sum
+    :attr a: first number of substraction
     :type a: int
-    :attr b: second number of sum
+    :attr b: second number of substraction
     :type b: int
     """
     return a - b

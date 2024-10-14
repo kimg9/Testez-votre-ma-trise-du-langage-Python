@@ -15,23 +15,25 @@ class Library:
             if book not in self.books:
                 self.books.append(book)
             else:
-                return print(f"Book {self.book} already exists in database.")
+                print(f"Book {self.book} already exists in database.")
         else:
-            return print("Please provide a book in correct format to add it to the library.")
+            print("Please provide a book in correct format to add it to the library.")
 
     def remove_book(self, book_title):
         for index, book in enumerate(self.books):
             if book_title in book.title:
                 self.books.pop(index)
-                return print(f"Book {book_title} was removed.")
-        return print("Book was not found.")
+                print(f"Book {book_title} was removed.")
+                break
+        print("Book was not found.")
 
     def borrow_book(self, book_title):
         for index, book in enumerate(self.books):
             if book_title in book.title:
                 self.books.pop(index)
                 self.borrow_books.append(book)
-                return print(f"Book {book_title} was marked as borrowed.")
+                print(f"Book {book_title} was marked as borrowed.")
+                break
 
     def available_books(self):
         list_of_titles = []

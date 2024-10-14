@@ -22,7 +22,7 @@ if name in students:
      print(f"Notes de {name}")
      for key , value in students[name].items():
           print(f"{key} : {value}")
-     all_grades = list(students[name].values())
+     all_grades = students[name].values()
      mean = round(sum(all_grades)/len(all_grades), 2)
      print(f"Moyenne de {name} : {mean}")
 else:

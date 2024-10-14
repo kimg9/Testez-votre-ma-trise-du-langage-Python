@@ -1,8 +1,15 @@
-## Écrivez votre code ici !
+# ## Écrivez votre code ici !
+# def square(number):
+#     if isinstance(number, int) or isinstance(number, float):
+#         return number * number
+#     else:
+#         print(f"Erreur ! {number} n'est pas un nombre !")
+#         return None
+
 def square(number):
-    if isinstance(number, int) or isinstance(number, float):
+    try:
         return number * number
-    else:
+    except TypeError:
         print(f"Erreur ! {number} n'est pas un nombre !")
         return None
 
